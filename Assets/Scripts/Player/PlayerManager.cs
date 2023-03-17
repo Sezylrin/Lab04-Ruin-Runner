@@ -78,6 +78,7 @@ public class PlayerManager : MonoBehaviour
     // Trigger Invulnerability for amount of secs, different for respawn and shield break.
     private void TriggerInvulnerable(float timeInSecs)
     {
+        IsInvulnerable = true;
         _invulnerableTimer = timeInSecs;
     }
 }
