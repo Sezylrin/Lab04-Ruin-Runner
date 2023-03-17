@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
     public bool allowDiagonalMovement;
+    public bool canMove;
 
     private Rigidbody2D _rb;
     private Vector2 _movement;
@@ -14,6 +15,11 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void Start()
+    {
+        canMove = true;
     }
 
     private void Update()
@@ -24,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!canMove) return;
         if (_movement.y > 0)
             _rb.velocity = Vector2.up * moveSpeed;
         else if (_movement.y < 0)
