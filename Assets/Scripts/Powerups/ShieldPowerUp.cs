@@ -1,19 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ShieldPowerUp : MonoBehaviour
 {
-    
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (!col.gameObject.CompareTag("Player")) return;
+        PlayerManager playerManager = col.gameObject.GetComponent<PlayerManager>();
+        playerManager.isShielded = true;
+        playerManager.shieldChild.SetActive(true);
+        Destroy(gameObject);
     }
 }

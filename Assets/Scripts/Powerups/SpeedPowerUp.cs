@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class SpeedPowerUp : MonoBehaviour
 {
+    [Tooltip("Change this to how much you want the player to speed up when collecting this object.")]
     public float addedSpeed;
 
     private PlayerMovement _playerMovement;

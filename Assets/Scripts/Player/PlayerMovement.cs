@@ -5,8 +5,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Tooltip("How fast the player moves")]
     public float moveSpeed;
+    [Tooltip("Allows for movement in all directions.")]
     public bool allowDiagonalMovement;
+    [HideInInspector]
     public bool canMove;
 
     private Rigidbody2D _rb;
@@ -19,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        canMove = true;
+        canMove = true; // Enable movement input
     }
 
     private void Update()
@@ -30,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!canMove) return;
+        if (!canMove) return; // Return if Input is disabled
         if (_movement.y > 0)
             _rb.velocity = Vector2.up * moveSpeed;
         else if (_movement.y < 0)
@@ -41,7 +44,6 @@ public class PlayerMovement : MonoBehaviour
             _rb.velocity = Vector2.left * moveSpeed;
         else _rb.velocity = Vector2.zero;
 
-        if (allowDiagonalMovement)
-            _rb.velocity = _movement.normalized * moveSpeed;
+        if (allowDiagonalMovement) _rb.velocity = _movement.normalized * moveSpeed; // Simpler/smoother movement with whole vector if toggled.
     }
 }
