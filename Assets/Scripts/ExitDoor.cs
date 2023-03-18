@@ -21,9 +21,12 @@ public class ExitDoor : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        //if (keys == maxKeys)
-        //{
+        if (other.gameObject.tag == "Player")
+        {
+            //if (keys == maxKeys)
+            //{
             //Loader.Load(Scene.Victory);
-        //}
+            //}
+        }
     }
 }
