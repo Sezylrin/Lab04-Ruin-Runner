@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 452902554949972340}
   - component: {fileID: 452902554949972341}
   - component: {fileID: 452902554949972303}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 452902554949972342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.039196253, y: -0.00000009674751, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -120,7 +120,7 @@ MonoBehaviour:
   forwardDirection: {x: -1, y: 0}
   enemyMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 64
   enemyMovement: {fileID: 452902554949972338}
   moveState: 2
   detectionDistance: 10

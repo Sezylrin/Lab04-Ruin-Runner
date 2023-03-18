@@ -13,7 +13,6 @@ public class EnemyAI : MonoBehaviour
     };
     public Transform Target;
 
-    private float targetDistance;
     private Vector2 targetLocation;
     private Vector2 currentLocation;
     private Vector2 deviatedLocation;
@@ -45,6 +44,9 @@ public class EnemyAI : MonoBehaviour
             Debug.Log("Please place an Astargrid in scene");
             Debug.Break();
         }
+        Target = GameObject.Find("Player").transform;
+        if (!Target)
+            Debug.Log("please drag player transform into target in enemy ai on enemy objects");
         prevMoveState = 0;
         pointInPath = 0;
         idlePoint = this.transform.position;
@@ -88,13 +90,12 @@ public class EnemyAI : MonoBehaviour
     {
         targetLocation = Target.position;
         currentLocation = this.transform.position;
-        targetDistance = CalculateDistance(currentLocation, targetLocation);
         Debug.DrawRay(currentLocation, forwardDirection * detectionDistance,Color.blue, 0.0f);
         RaycastHit2D hit = Physics2D.Raycast(currentLocation, forwardDirection,detectionDistance,~enemyMask);
         //Debug.Log(hit.collider.gameObject.name);
         if (hit && hit.collider.CompareTag("Player"))
         {
-            Debug.Log("running");
+            //Debug.Log("Chasing");
             if (deviatedLocation == Vector2.zero)
                 deviatedLocation = currentLocation;
             if (CalculateDistance(deviatedLocation, currentLocation) <= maxDistance)
@@ -102,7 +103,7 @@ public class EnemyAI : MonoBehaviour
         }
         if (CalculateDistance(deviatedLocation, currentLocation) > maxDistance)
         {
-            Debug.Log("return to patrol");
+            //Debug.Log("return to patrol");
             deviatedLocation = Vector2.zero;
             moveState = (int)Move_State.patrol;
         }
