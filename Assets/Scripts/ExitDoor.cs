@@ -23,7 +23,7 @@ public class ExitDoor : MonoBehaviour
     {
         //if (keys == maxKeys)
         //{
-            Loader.Load(Scene.Victory);
+            //Loader.Load(Scene.Victory);
         //}
     }
 }
