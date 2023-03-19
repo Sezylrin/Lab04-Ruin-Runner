@@ -62,29 +62,49 @@ public class GameManager : MonoBehaviour
         LevelManager.Instance.SetLives(lives.ToString());
     }
 
-    public void CollectCoin()
+    public void CollectCoin(Vector3 playerPosition)
     {
         coinsCollected++;
         AddToScore(50);
         LevelManager.Instance.SetScore(score.ToString());
         if (coinsCollected % coinAmountToSpawnKey == 0 && canSpawnKey)
         {
-            SpawnKey();
+            SpawnKey(playerPosition);
         }
     }
 
-    private void SpawnKey()
+    private void SpawnKey(Vector3 playerPosition)
     {
         if (keysCollected == level)
         {
             canSpawnKey = false;
         }
-        Instantiate(key, keySpawnLocations[0], Quaternion.identity);
+        Vector2 spawnLocation = FindFurthestSpawnLocation(playerPosition);
+        Instantiate(key, spawnLocation, Quaternion.identity);
     }
 
     private void AddToScore(int scoreToAdd)
     {
         score += scoreToAdd;
         LevelManager.Instance.SetScore(score.ToString());
+    }
+
+    private Vector2 FindFurthestSpawnLocation(Vector3 playerPosition)
+    {
+        float maxDistance = 0f;
+        Vector2 furthestSpawnLocation = Vector2.zero;
+
+        foreach (Vector2 spawnLocation in keySpawnLocations)
+        {
+            float distance = Vector2.Distance(playerPosition, spawnLocation);
+
+            if (distance > maxDistance)
+            {
+                maxDistance = distance;
+                furthestSpawnLocation = spawnLocation;
+            }
+        }
+
+        return furthestSpawnLocation;
     }
 }
