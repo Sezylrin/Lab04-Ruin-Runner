@@ -15,7 +15,10 @@ public class GameManager : MonoBehaviour
     public int level { get; private set; } = 1;
     private int coinsCollected = 0;
     private bool canSpawnKey = true;
-    private Vector2[] keySpawnLocations = new Vector2[] { new Vector2(-10f, 7.55f) };
+    private Vector2[] keySpawnLocations = new Vector2[] { 
+        new Vector2(-9.6f, -13.7f),
+        new Vector2(-46.5f, -13.7f),
+    };
 
     private void Awake()
     {
