@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     public void NewGame()
     {
         keysCollected = 0;
-        lives = 0;
+        lives = 3;
         score = 0;
         coinsCollected = 0;
     }
