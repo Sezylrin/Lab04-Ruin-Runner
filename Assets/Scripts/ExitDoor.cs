@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class ExitDoor : MonoBehaviour
 {
-
     private BoxCollider2D exitTrigger;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,10 +23,10 @@ public class ExitDoor : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            //if (keys == maxKeys)
-            //{
-            //Loader.Load(Scene.Victory);
-            //}
+            if (GameManager.Instance.CanExitLevel())
+            {
+                Loader.Load(Scene.Victory);
+            }
         }
     }
 }
