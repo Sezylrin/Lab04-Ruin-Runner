@@ -300,6 +300,7 @@ GameObject:
   - component: {fileID: 5600008681035223533}
   - component: {fileID: 5600008681035223532}
   - component: {fileID: 5600008681035223531}
+  - component: {fileID: 1742655623}
   m_Layer: 5
   m_Name: LevelCanvas
   m_TagString: Untagged
@@ -390,6 +391,24 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &1742655623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5600008681035223530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10931c58714125d44acac934ff51c706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keys:
+  - {fileID: 5600008681270263267}
+  - {fileID: 5600008680701353680}
+  - {fileID: 5600008681842968365}
+  score: {fileID: 5600008681805005027}
+  lives: {fileID: 5600008681151181923}
 --- !u!1 &5600008681040262609
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,7 +582,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 71, y: 0}
+  m_AnchoredPosition: {x: 120, y: 0}
   m_SizeDelta: {x: 220, y: 40}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &5600008681151181924
@@ -628,7 +647,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -986,8 +1005,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 75, y: 0}
-  m_SizeDelta: {x: 220, y: 40}
+  m_AnchoredPosition: {x: 135, y: 0}
+  m_SizeDelta: {x: 230, y: 40}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &5600008681805005028
 CanvasRenderer:
@@ -1051,7 +1070,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0

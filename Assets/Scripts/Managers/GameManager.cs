@@ -42,18 +42,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void IncrementKeysCollected(int keysToAdd = 1)
+    public void CollectKey()
     {
-        keysCollected += keysToAdd;
+        ++keysCollected;
+        LevelManager.Instance.CollectKey(keysCollected - 1);
     }
 
     public void DecrementLives()
     {
         lives--;
+        LevelManager.Instance.SetLives(lives.ToString());
     }
 
     public void AddToScore(int scoreToAdd)
     {
         score += scoreToAdd;
+        LevelManager.Instance.SetScore(score.ToString());
     }
 }
