@@ -17,14 +17,17 @@ public class PlayerManager : MonoBehaviour
     [Tooltip("Set this to the shield component in the Player's children if it is not set already.")]
     public GameObject shieldChild;
     private PlayerMovement _playerMovement;
-
     private SpriteRenderer _spriteRenderer;
+    private Collider2D _collider2D;
+    private Rigidbody2D _rigidbody2D;
     //Timers
     private float _invulnerableTimer;
 
     private void Awake()
     {
         _playerMovement = GetComponent<PlayerMovement>();
+        _collider2D = GetComponent<Collider2D>();
+        _rigidbody2D = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
@@ -60,8 +63,10 @@ public class PlayerManager : MonoBehaviour
     private void HandleDeath()
     {
         _playerMovement.canMove = false; // Disable movement input.
-        gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero; // Edge case of moving while dying.
-        GameManager.Instance.DecrementLives(); // TODO: change this out for full death handling on GameManager.
+        _rigidbody2D.velocity = Vector2.zero; // Edge case of moving while dying.
+        _rigidbody2D.isKinematic = true;
+        _collider2D.enabled = false;
+        if (GameManager.Instance) GameManager.Instance.DecrementLives(); // TODO: change this out for full death handling on GameManager.
         TriggerInvulnerable(999.9f); // Become invulnerable while playing death animation.
         //TODO: Play Death Animation
         //Then Respawn();
@@ -70,6 +75,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Respawn()
     {
+        _collider2D.enabled = true;
         TriggerInvulnerable(3.0f); // Be invulnerable for 3s after respawning to avoid immediate death.
         transform.position = spawnPoint; // Respawn at spawn point. TODO: change to facilitate multiple spawns/different levels.
         _playerMovement.canMove = true; // Enable movement input.
