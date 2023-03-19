@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public int lives { get; private set; }
     public int score { get; private set; }
     private int coinsCollected = 0;
-    private int level = 1;
+    public int level = 1;
     private bool canSpawnKey = true;
     private Vector2[] keySpawnLocations = new Vector2[] { new Vector2(-10f, 7.55f) };
 
@@ -106,5 +106,10 @@ public class GameManager : MonoBehaviour
         }
 
         return furthestSpawnLocation;
+    }
+    
+    public bool CanExitLevel()
+    {
+        return level == keysCollected;
     }
 }
