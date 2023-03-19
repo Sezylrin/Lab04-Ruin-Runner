@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class EnemyCollision : MonoBehaviour
 {
     [SerializeField, Tooltip("Causes enemy to die when colliding with a shielded player")]
     private bool dieOnShieldedCollision;

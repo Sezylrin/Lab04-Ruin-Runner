@@ -52,6 +52,7 @@ public class EnemyAI : MonoBehaviour
         idlePoint = this.transform.position;
         moveState = (int)Move_State.patrol;
         Target = GameObject.FindGameObjectWithTag("Player").transform;
+        PlayerManager.OnDeath += SetToPatrol;
     }
 
     // Update is called once per frame
@@ -95,7 +96,6 @@ public class EnemyAI : MonoBehaviour
         //Debug.Log(hit.collider.gameObject.name);
         if (hit && hit.collider.CompareTag("Player"))
         {
-            //Debug.Log("Chasing");
             if (deviatedLocation == Vector2.zero)
                 deviatedLocation = currentLocation;
             if (CalculateDistance(deviatedLocation, currentLocation) <= maxDistance)
@@ -182,5 +182,10 @@ public class EnemyAI : MonoBehaviour
     public float CalculateDistance(Vector2 a, Vector2 b)
     {
         return Vector2.Distance(a, b);
+    }
+
+    private void SetToPatrol()
+    {
+        moveState = (int)Move_State.patrol;
     }
 }
