@@ -76,7 +76,7 @@ MonoBehaviour:
   moveState: 2
   detectionDistance: 10
   maxDistance: 10
-  idleRadius: 5
+  chaseSpeedMultiplier: 0
   patrolPoints: []
 --- !u!70 &452902554949972340
 CapsuleCollider2D:
@@ -93,7 +93,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

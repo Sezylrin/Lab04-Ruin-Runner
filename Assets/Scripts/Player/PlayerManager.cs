@@ -16,6 +16,7 @@ public class PlayerManager : MonoBehaviour
     public Vector3 spawnPoint;
     [Tooltip("Set this to the shield component in the Player's children if it is not set already.")]
     public GameObject shieldChild;
+    public GameObject SpeedChild;
     private PlayerMovement _playerMovement;
     private Collider2D _collider2D;
     private Rigidbody2D _rigidbody2D;
