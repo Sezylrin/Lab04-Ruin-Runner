@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
-using TMPro;
 
 public class MainMenuCanvasManager : MonoBehaviour
 {
@@ -30,6 +28,5 @@ public class MainMenuCanvasManager : MonoBehaviour
     public void SetSceneToLoad(Scene scene)
     {
         sceneToLoad = scene;
-        GameManager.Instance.NewGame();
     }
 }
