@@ -12,10 +12,14 @@ public class GameManager : MonoBehaviour
     public int keysCollected { get; private set; }
     public int lives { get; private set; }
     public int score { get; private set; }
+    public int level { get; private set; } = 1;
     private int coinsCollected = 0;
-    public int level = 1;
     private bool canSpawnKey = true;
-    private Vector2[] keySpawnLocations = new Vector2[] { new Vector2(-10f, 7.55f) };
+    private Vector2[] keySpawnLocations = new Vector2[] { 
+        new Vector2(-5f, -11.5f),
+        new Vector2(-42f, -11.5f),
+        new Vector2(-33f, 10.5f),
+    };
 
     private void Awake()
     {
@@ -33,21 +37,9 @@ public class GameManager : MonoBehaviour
     public void NewGame()
     {
         keysCollected = 0;
-        lives = 0;
+        lives = 3;
         score = 0;
         coinsCollected = 0;
-    }
-
-    public void Respawn()
-    {
-        if (--lives == 0)
-        {
-            //GameOver
-        }
-        else
-        {
-            //Respawn
-        }
     }
 
     public void CollectKey()
@@ -58,8 +50,15 @@ public class GameManager : MonoBehaviour
 
     public void DecrementLives()
     {
-        lives--;
-        LevelManager.Instance.SetLives(lives.ToString());
+        if (lives == 0)
+        {
+            Loader.Load(Scene.GameOver);
+        }
+        else
+        {
+            lives--;
+            LevelManager.Instance.SetLives(lives.ToString());
+        }
     }
 
     public void CollectCoin(Vector3 playerPosition)
@@ -79,6 +78,7 @@ public class GameManager : MonoBehaviour
         {
             canSpawnKey = false;
         }
+        if (!canSpawnKey) return;
         Vector2 spawnLocation = FindFurthestSpawnLocation(playerPosition);
         Instantiate(key, spawnLocation, Quaternion.identity);
     }

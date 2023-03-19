@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,7 +105,2119 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 336
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c17e5f7e2866f4ab76092a05f46692
+      internalID: 2136012923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_1
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 337
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b551be024596c47abf23e308e991e0
+      internalID: 1338462263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 338
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b22b206678444c646a988c70b020d039
+      internalID: -482676003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_3
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 336
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 398947bb5ccdd6b4c82a69179dd79f0f
+      internalID: -2022754665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_4
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 337
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abc17ecfd510154439c19487519ebc55
+      internalID: 843505573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_5
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 338
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c136cd8f2f603d94292669e9e27f8336
+      internalID: 786912170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_6
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 336
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c86a027b8ef4d58478edbfb78cba8e5a
+      internalID: 2146813903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_7
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 337
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b324274c8617b3488c76d262a7a881a
+      internalID: -1166404023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_8
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 338
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 835c03122c8810648be6221bbf824298
+      internalID: -891628775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_9
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 336
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4af2c929ecb72104c8301930adbba85c
+      internalID: -303611108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_10
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 337
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7772d7df59f51a345afbad84345a52a3
+      internalID: 177037828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_11
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 338
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3cbefde431e2d24c82a2bb601ead66f
+      internalID: -828555180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_12
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 290
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c1212e5516abef46a4c1866e49fbf8a
+      internalID: -993393912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_13
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 292
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a31913e58f00254cae197d2440fc9b7
+      internalID: 1598998842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_14
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 294
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d1f88e2df4978c418b44fc17462ae0c
+      internalID: 1322770725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_15
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 290
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb7e1f51f97f4594a825068982692158
+      internalID: 226840715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_16
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 292
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e83c3eaf0c4fa1045a3d8dfedc1f0c69
+      internalID: -1455537326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_17
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 294
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fe494991e5738940a13be9d0a7afbef
+      internalID: 1620908385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_18
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 290
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf9b62630ab3aef47ae70f8598770303
+      internalID: -1629901267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_19
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 292
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddaa022f0de1cd34b8707da6b8c3c53a
+      internalID: -1395572659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_20
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 294
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4987894dcdeb8c4895e5477ffe9aaa2
+      internalID: 604613481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_21
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 290
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42975970e8486e94794eaca2467918f6
+      internalID: 642962853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_22
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 292
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f4dad12ca4f2f246a801465f4a55eca
+      internalID: 57850844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_23
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 294
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a5b4cd8aed14d7458fa76ed24021a8a
+      internalID: -964610244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_24
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 242
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af6b78a79101c5c4b879226d2857ec70
+      internalID: 2144997078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_25
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 244
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acb3033c247ee674a93b0ce7c2155f6d
+      internalID: 644882430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_26
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 246
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac9b343f6fc6ec4a859754a057f9b52
+      internalID: 1869050844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_27
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 242
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e51d61bd35ca51e4fbe98000b214df96
+      internalID: -5250563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_28
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 244
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f3d904ba6c5f6044a11e561316da0d9
+      internalID: 360307366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_29
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 246
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0168e4e4dc55464b9e4e15191533fb3
+      internalID: 327858292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_30
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 242
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4f3e82ef9daf8b4a83c70c27b3c766d
+      internalID: 443891941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_31
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 244
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 425c23672bf95a94e961d01d6757d9ce
+      internalID: -1995233658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_32
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 246
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0544d44112fa5694aafa188958e1d6fe
+      internalID: 1869782382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_33
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 242
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e605cc607d4a2ce488a2ea03f4bc98bf
+      internalID: 2131353678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_34
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 244
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd205d33f1f54a4ea824e9a7fa76152
+      internalID: 606893326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_35
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 246
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deea2838172b01b4aa4516ed51a1fe2b
+      internalID: 1365326495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_36
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 194
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91479c0b20a51394a94f7a4087fc8250
+      internalID: 940719861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_37
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 195
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 727f49911d5a43944be82a38f7fbb5a1
+      internalID: 1780800097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_38
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 196
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e8d85fc741078144b8da7676bf8d33b
+      internalID: 537024368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_39
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 194
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 907a67902edb5db489ece8c67129049a
+      internalID: 1997681408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_40
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 195
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75eb8f1babef2b04188874ef8dd023fe
+      internalID: -1356495948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_41
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 196
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb9d004c038c02247a63aa3f617c098c
+      internalID: -127421255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_42
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 194
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29dc96298c436924c97e6a306a63b7c4
+      internalID: 1656701128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_43
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 195
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7867feb9f18fce240ba5b6ab10dff165
+      internalID: 1142274293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_44
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 196
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0473587fdb867f478156d30414f6cda
+      internalID: -663484940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_45
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 194
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a56c2590be832044295bff9b8e833875
+      internalID: 1256339107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_46
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 195
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51bf7707384763446919a4dd9a5cd3b6
+      internalID: -226354459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_47
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 196
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7ac709d820a63b4b835ae9b328d76cf
+      internalID: -775007961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_48
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 144
+        width: 39
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63d4420f139f4054fa11ef1ddd13da6a
+      internalID: 582785953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_49
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 145
+        width: 38
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea71858cb01f524eba42b45f2fffac1
+      internalID: -370286878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_50
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 146
+        width: 40
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e04c6a728d384949b88d7b4424d663d
+      internalID: -538516983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_51
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 144
+        width: 39
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0522cd84ad978b45b2b075296a3c54e
+      internalID: 428535926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_52
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 145
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb141eed05fc0b94d9085fa6fc07ae0a
+      internalID: -170637411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_53
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 146
+        width: 40
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6fd774fa73a56342a2f42c5617b524d
+      internalID: 1594063556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_54
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 144
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8269c8b7f6a4f3c4f9e2c7df2c80811f
+      internalID: -566647274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_55
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 145
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33716f6e492211f40b5d4305e61dad62
+      internalID: 703125829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_56
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 146
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee200d46ea6b587448e3fb89eab22a5e
+      internalID: 1306072706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_57
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 144
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81dfadc06336bfc47a45f2187e3a029c
+      internalID: -1944318022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_58
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 145
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd8656ef62e1c904bba6592b223b18ce
+      internalID: 394581472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_59
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 146
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8be4dd701610a7e47bc1cc514b3c950f
+      internalID: -1940535266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_60
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 98
+        width: 40
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bacbc6d942a771479c7a3ac7af56ed2
+      internalID: -976738537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_61
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 100
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 117f9eda486b14d4f805de84b19c9288
+      internalID: -483691623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_62
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 102
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4947a3d7100ea98468c6204609e16683
+      internalID: -1452775157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_63
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 98
+        width: 40
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 824fabeedc60e8c4a8e9cd06415cc47e
+      internalID: 1673934107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_64
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 98
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90382fbca1be55b48af8ae9a1bba919d
+      internalID: 477100222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_65
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 102
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59307669f418f5a4e98accfb73c39b11
+      internalID: -715659185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_66
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 98
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75e3313306ed7dc44878c037e0a990dd
+      internalID: -916822783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_67
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 100
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0624f5c8261119d4b95812e8440ded50
+      internalID: 1628518089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_68
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 102
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe3c7f309d8ea64d9a5b1c81647f2b1
+      internalID: 808293157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_69
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 98
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaed8fb34ae9dcc4c8a9eff5d38edfd6
+      internalID: -1016998169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_70
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 100
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce7c37eba21f8f44bffd59c7296dc21
+      internalID: -178121928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_71
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 102
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b05ebd1cb6e8641b57e897d64dd3ff
+      internalID: 1137823160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_72
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 49
+        width: 41
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 501c01ad5af7fd044a4c7c7fab85587d
+      internalID: 82320970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_73
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 52
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea52614bf5cd18f4db1d9abd24d6adb2
+      internalID: -397274006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_74
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 51
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f4813cb4e589b4ea08b9835923e2f6
+      internalID: 272008917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_75
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 46
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd8819f28768c24b93fbf897c9d429b
+      internalID: 1179138686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_76
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 52
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 734d72e6b5f8dc44eb356edbf52d0cbf
+      internalID: -350086711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_77
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 51
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d352978f7183812428b996082294d45b
+      internalID: 281909766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_78
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 50
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca2d3221a5f569b4bbb284c350bd1404
+      internalID: -990551148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_79
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 52
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3498e5a4ccc1ac24ba6d1fcd15e650a7
+      internalID: 756196453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_80
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 54
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c7c197c0f0efc74bb42da56b2094d09
+      internalID: -1055205871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_81
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 50
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c339e98faa067934db76d1f9b0c8b23a
+      internalID: -229462724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_82
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 52
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7282cd2ebb7878e4999148a4c25a1f0e
+      internalID: 1209096745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_83
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 54
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 601f3d78e853506489cff07bd339d8aa
+      internalID: -242563259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_84
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 41
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf0d1ace7b0f8b4ea99a1a1cf78f1fc
+      internalID: -215596741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_85
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 3
+        width: 40
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e79bed276a409364fb8ed0bfb9c5f7f5
+      internalID: -1325813400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_86
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 3
+        width: 43
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f30c3f8ffece5c47b0dcd6e06878d95
+      internalID: -771997567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_87
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 2
+        width: 41
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff61763c3540544ba2545f0e6ccc53c
+      internalID: 282239736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_88
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 1
+        width: 40
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14feba9423e200a4e891b700c1f1a329
+      internalID: -295439803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_89
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 1
+        width: 44
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e11c3c0114d3de4d88e710d70b56e1d
+      internalID: 643870046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_90
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 2
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c62271af41f12439a381095bd3e685
+      internalID: 1326073933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_91
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 3
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b525665c38cabe9409f773b350a7ed70
+      internalID: -1676846775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_92
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 4
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b0deaeec944bc9469fa7379fb903f0a
+      internalID: 831540951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_93
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 2
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ee044f034997af408222110a12ec0fc
+      internalID: 1566954479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_94
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 3
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a80c52fbf8d502f4db506dd720b3f41f
+      internalID: -119939066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV
+        Games!_95
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 4
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f38b7c52ea12f3489a9e4412f6ba695
+      internalID: -1272290270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -116,7 +2228,103 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_0: 2136012923
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_1: 1338462263
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_10: 177037828
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_11: -828555180
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_12: -993393912
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_13: 1598998842
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_14: 1322770725
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_15: 226840715
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_16: -1455537326
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_17: 1620908385
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_18: -1629901267
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_19: -1395572659
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_2: -482676003
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_20: 604613481
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_21: 642962853
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_22: 57850844
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_23: -964610244
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_24: 2144997078
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_25: 644882430
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_26: 1869050844
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_27: -5250563
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_28: 360307366
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_29: 327858292
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_3: -2022754665
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_30: 443891941
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_31: -1995233658
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_32: 1869782382
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_33: 2131353678
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_34: 606893326
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_35: 1365326495
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_36: 940719861
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_37: 1780800097
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_38: 537024368
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_39: 1997681408
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_4: 843505573
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_40: -1356495948
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_41: -127421255
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_42: 1656701128
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_43: 1142274293
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_44: -663484940
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_45: 1256339107
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_46: -226354459
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_47: -775007961
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_48: 582785953
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_49: -370286878
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_5: 786912170
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_50: -538516983
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_51: 428535926
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_52: -170637411
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_53: 1594063556
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_54: -566647274
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_55: 703125829
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_56: 1306072706
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_57: -1944318022
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_58: 394581472
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_59: -1940535266
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_6: 2146813903
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_60: -976738537
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_61: -483691623
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_62: -1452775157
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_63: 1673934107
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_64: 477100222
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_65: -715659185
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_66: -916822783
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_67: 1628518089
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_68: 808293157
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_69: -1016998169
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_7: -1166404023
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_70: -178121928
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_71: 1137823160
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_72: 82320970
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_73: -397274006
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_74: 272008917
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_75: 1179138686
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_76: -350086711
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_77: 281909766
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_78: -990551148
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_79: 756196453
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_8: -891628775
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_80: -1055205871
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_81: -229462724
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_82: 1209096745
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_83: -242563259
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_84: -215596741
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_85: -1325813400
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_86: -771997567
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_87: 282239736
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_88: -295439803
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_89: 643870046
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_9: -303611108
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_90: 1326073933
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_91: -1676846775
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_92: 831540951
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_93: 1566954479
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_94: -119939066
+      Ghosts sprite - RPG TileSet Free Curated Assets for your RPG Maker MV Games!_95: -1272290270
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

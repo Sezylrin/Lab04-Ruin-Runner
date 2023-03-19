@@ -6,13 +6,14 @@ using Pathfinding;
 public class EnemyMovement : MonoBehaviour
 {
 
-    public float speed = 200f;
+    private float speed;
+
+    public float BaseSpeed;
     public float nextWayPointDistance = 0.5f;
     private Vector2 currentTarget;
 
     Path path;
     int CurrentWaypoint = 0;
-    bool reachedEndOfPath = false;
     bool startedPathing = false;
     bool isMoving = false;
     Vector2 dir;
@@ -22,6 +23,7 @@ public class EnemyMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        speed = BaseSpeed;
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -73,11 +75,6 @@ public class EnemyMovement : MonoBehaviour
             DeletePath();
             return;
         }
-        else
-        {
-            // Debug.Log(CurrentWaypoint + " " + path.vectorPath.Count);
-            reachedEndOfPath = false;
-        }
         isMoving = true;
         dir = ((Vector2)path.vectorPath[CurrentWaypoint] - rb.position).normalized;
         Vector2 force = dir * speed * Time.deltaTime;
@@ -114,9 +111,16 @@ public class EnemyMovement : MonoBehaviour
     public void DeletePath()
     {
         isMoving = false;
-        reachedEndOfPath = true;
         rb.velocity = Vector2.zero;
         CancelPathing();
         path = null;
+    }
+    public void SetSpeed(float Speed)
+    {
+        speed = Speed;
+    }
+    public float GetSpeed()
+    {
+        return speed;
     }
 }

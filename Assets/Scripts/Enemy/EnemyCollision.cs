@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class EnemyCollision : MonoBehaviour
 {
     [SerializeField, Tooltip("Causes enemy to die when colliding with a shielded player")]
     private bool dieOnShieldedCollision;
@@ -15,6 +15,10 @@ public class Enemy : MonoBehaviour
         if (playerManager.IsInvulnerable) return;
         if (playerManager.isShielded) HandleShieldedCollision();
         col.gameObject.GetComponent<PlayerManager>().TakeDamage();
+        Debug.Log("collision triggered");
+        EnemyAI tempAi = GetComponent<EnemyAI>();
+        tempAi.SetChase(false);
+        tempAi.SetToPatrol();
     }
 
     private void HandleShieldedCollision()
