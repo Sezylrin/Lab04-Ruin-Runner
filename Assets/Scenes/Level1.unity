@@ -17674,6 +17674,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5600008681151181922, guid: edb35837bd63fd942ad9b9c42c9d02fa, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600008681151181923, guid: edb35837bd63fd942ad9b9c42c9d02fa, type: 3}
+      propertyPath: m_text
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600008681151181923, guid: edb35837bd63fd942ad9b9c42c9d02fa, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600008681805005026, guid: edb35837bd63fd942ad9b9c42c9d02fa, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 230
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600008681805005026, guid: edb35837bd63fd942ad9b9c42c9d02fa, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600008681805005027, guid: edb35837bd63fd942ad9b9c42c9d02fa, type: 3}
+      propertyPath: m_text
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600008681805005027, guid: edb35837bd63fd942ad9b9c42c9d02fa, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
