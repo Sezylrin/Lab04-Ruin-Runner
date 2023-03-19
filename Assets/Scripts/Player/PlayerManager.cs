@@ -17,7 +17,6 @@ public class PlayerManager : MonoBehaviour
     [Tooltip("Set this to the shield component in the Player's children if it is not set already.")]
     public GameObject shieldChild;
     private PlayerMovement _playerMovement;
-    private SpriteRenderer _spriteRenderer;
     private Collider2D _collider2D;
     private Rigidbody2D _rigidbody2D;
     //Timers
@@ -28,7 +27,6 @@ public class PlayerManager : MonoBehaviour
         _playerMovement = GetComponent<PlayerMovement>();
         _collider2D = GetComponent<Collider2D>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void Start()
@@ -40,7 +38,6 @@ public class PlayerManager : MonoBehaviour
 
     private void Update()
     {
-        _spriteRenderer.color = IsInvulnerable ? Color.blue : Color.red;
         if (!IsInvulnerable) return;
         _invulnerableTimer -= Time.deltaTime;
         IsInvulnerable = _invulnerableTimer > 0;
@@ -75,6 +72,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Respawn()
     {
+        _rigidbody2D.isKinematic = false;
         _collider2D.enabled = true;
         TriggerInvulnerable(3.0f); // Be invulnerable for 3s after respawning to avoid immediate death.
         transform.position = spawnPoint; // Respawn at spawn point. TODO: change to facilitate multiple spawns/different levels.
