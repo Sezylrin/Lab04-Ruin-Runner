@@ -111,7 +111,6 @@ public class EnemyAI : MonoBehaviour
         Debug.DrawRay(currentLocation, forwardDirection * detectionDistance,Color.blue, 0.0f);
         RaycastHit2D hit = Physics2D.Raycast(currentLocation, forwardDirection,detectionDistance,~enemyMask);
         //Debug.Log(hit.collider.gameObject.name);
-        Debug.Log(allowChase);
         if (hit && hit.collider.CompareTag("Player") && allowChase)
         {
             enemyMovement.SetSpeed(enemyMovement.BaseSpeed * chaseSpeedMultiplier);
@@ -122,7 +121,7 @@ public class EnemyAI : MonoBehaviour
         }
         if (CalculateDistance(deviatedLocation, currentLocation) > maxDistance)
         {
-            Debug.Log("return to patrol");
+            //Debug.Log("return to patrol");
             deviatedLocation = Vector2.zero;
             moveState = (int)Move_State.patrol;
         }
