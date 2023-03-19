@@ -6,9 +6,16 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
+    [SerializeField] private int coinAmountToSpawnKey;
+    [SerializeField] private GameObject key;
+
     public int keysCollected { get; private set; }
     public int lives { get; private set; }
     public int score { get; private set; }
+    private int coinsCollected = 0;
+    private int level = 1;
+    private bool canSpawnKey = true;
+    private Vector2[] keySpawnLocations = new Vector2[] { new Vector2(-10f, 7.55f) };
 
     private void Awake()
     {
@@ -28,6 +35,7 @@ public class GameManager : MonoBehaviour
         keysCollected = 0;
         lives = 0;
         score = 0;
+        coinsCollected = 0;
     }
 
     public void Respawn()
@@ -42,18 +50,61 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void IncrementKeysCollected(int keysToAdd = 1)
+    public void CollectKey()
     {
-        keysCollected += keysToAdd;
+        ++keysCollected;
+        LevelManager.Instance.CollectKey(keysCollected - 1);
     }
 
     public void DecrementLives()
     {
         lives--;
+        LevelManager.Instance.SetLives(lives.ToString());
     }
 
-    public void AddToScore(int scoreToAdd)
+    public void CollectCoin(Vector3 playerPosition)
+    {
+        coinsCollected++;
+        AddToScore(50);
+        LevelManager.Instance.SetScore(score.ToString());
+        if (coinsCollected % coinAmountToSpawnKey == 0 && canSpawnKey)
+        {
+            SpawnKey(playerPosition);
+        }
+    }
+
+    private void SpawnKey(Vector3 playerPosition)
+    {
+        if (keysCollected == level)
+        {
+            canSpawnKey = false;
+        }
+        Vector2 spawnLocation = FindFurthestSpawnLocation(playerPosition);
+        Instantiate(key, spawnLocation, Quaternion.identity);
+    }
+
+    private void AddToScore(int scoreToAdd)
     {
         score += scoreToAdd;
+        LevelManager.Instance.SetScore(score.ToString());
+    }
+
+    private Vector2 FindFurthestSpawnLocation(Vector3 playerPosition)
+    {
+        float maxDistance = 0f;
+        Vector2 furthestSpawnLocation = Vector2.zero;
+
+        foreach (Vector2 spawnLocation in keySpawnLocations)
+        {
+            float distance = Vector2.Distance(playerPosition, spawnLocation);
+
+            if (distance > maxDistance)
+            {
+                maxDistance = distance;
+                furthestSpawnLocation = spawnLocation;
+            }
+        }
+
+        return furthestSpawnLocation;
     }
 }

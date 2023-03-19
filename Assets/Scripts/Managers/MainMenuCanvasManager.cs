@@ -30,6 +30,5 @@ public class MainMenuCanvasManager : MonoBehaviour
     public void SetSceneToLoad(Scene scene)
     {
         sceneToLoad = scene;
-        GameManager.Instance.NewGame();
     }
 }
