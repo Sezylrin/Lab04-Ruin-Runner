@@ -16,8 +16,9 @@ public class GameManager : MonoBehaviour
     private int coinsCollected = 0;
     private bool canSpawnKey = true;
     private Vector2[] keySpawnLocations = new Vector2[] { 
-        new Vector2(-9.6f, -13.7f),
-        new Vector2(-46.5f, -13.7f),
+        new Vector2(-5f, -11.5f),
+        new Vector2(-42f, -11.5f),
+        new Vector2(-33f, 10.5f),
     };
 
     private void Awake()
@@ -77,6 +78,7 @@ public class GameManager : MonoBehaviour
         {
             canSpawnKey = false;
         }
+        if (!canSpawnKey) return;
         Vector2 spawnLocation = FindFurthestSpawnLocation(playerPosition);
         Instantiate(key, spawnLocation, Quaternion.identity);
     }
