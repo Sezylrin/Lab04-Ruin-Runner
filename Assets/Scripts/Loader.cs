@@ -2,9 +2,9 @@ using UnityEngine.SceneManagement;
 public enum Scene
 {
     MainMenu,
+    Level1,
     GameOver,
     Victory,
-    Level1,
 }
 
 public static class Loader
