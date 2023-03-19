@@ -11,13 +11,20 @@ public class EnemyAI : MonoBehaviour
         chasing,
         patrol
     };
+    public enum Enemy_Type : int
+    {
+        Normal,
+        Special
+    }
     public Transform Target;
 
     private Vector2 targetLocation;
     private Vector2 currentLocation;
     private Vector2 deviatedLocation;
     private int pointInPath;
-
+    
+    [SerializeField]
+    private Enemy_Type EnemyType;
     [SerializeField]
     private Vector2 forwardDirection;
     [SerializeField]
@@ -27,10 +34,12 @@ public class EnemyAI : MonoBehaviour
     [SerializeField]
     private int moveState;
     private int prevMoveState;
+    private bool allowChase;
 
     public float detectionDistance;
     public float maxDistance;
-    public float idleRadius;
+    private float idleRadius;
+    public float chaseSpeedMultiplier;
     public Vector2[] patrolPoints;
 
     private Vector2 idlePoint;
@@ -38,6 +47,7 @@ public class EnemyAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        allowChase = true;
         GameObject Grid = GameObject.Find("Astargrid");
         if (!Grid)
         {
@@ -89,13 +99,22 @@ public class EnemyAI : MonoBehaviour
     //decides current move state based on logic
     public void StateDecider()
     {
+        if(EnemyType == Enemy_Type.Special)
+        {
+            if (GameManager.Instance != null && GameManager.Instance.level == GameManager.Instance.keysCollected)
+                enemyMovement.SetSpeed(enemyMovement.BaseSpeed * chaseSpeedMultiplier);
+            moveState = (int)Move_State.chasing;
+            return;
+        }
         targetLocation = Target.position;
         currentLocation = this.transform.position;
         Debug.DrawRay(currentLocation, forwardDirection * detectionDistance,Color.blue, 0.0f);
         RaycastHit2D hit = Physics2D.Raycast(currentLocation, forwardDirection,detectionDistance,~enemyMask);
         //Debug.Log(hit.collider.gameObject.name);
-        if (hit && hit.collider.CompareTag("Player"))
+        Debug.Log(allowChase);
+        if (hit && hit.collider.CompareTag("Player") && allowChase)
         {
+            enemyMovement.SetSpeed(enemyMovement.BaseSpeed * chaseSpeedMultiplier);
             if (deviatedLocation == Vector2.zero)
                 deviatedLocation = currentLocation;
             if (CalculateDistance(deviatedLocation, currentLocation) <= maxDistance)
@@ -103,7 +122,7 @@ public class EnemyAI : MonoBehaviour
         }
         if (CalculateDistance(deviatedLocation, currentLocation) > maxDistance)
         {
-            //Debug.Log("return to patrol");
+            Debug.Log("return to patrol");
             deviatedLocation = Vector2.zero;
             moveState = (int)Move_State.patrol;
         }
@@ -132,6 +151,7 @@ public class EnemyAI : MonoBehaviour
     //Patrol between points
     public void Patrol()
     {
+        enemyMovement.SetSpeed(enemyMovement.BaseSpeed);
         if (patrolPoints.Length == 0)
         {
             Debug.Log("Please Set Patrol Points");
@@ -145,6 +165,9 @@ public class EnemyAI : MonoBehaviour
             pointInPath %= patrolPoints.Length;
             enemyMovement.StartPathing();
         }
+        
+        if (CalculateDistance(currentLocation, patrolPoints[pointInPath]) < maxDistance * 0.5)
+            allowChase = true;
     }
     // Chases target 
     public void Chase()
@@ -184,8 +207,18 @@ public class EnemyAI : MonoBehaviour
         return Vector2.Distance(a, b);
     }
 
-    private void SetToPatrol()
+    public void SetToPatrol()
     {
         moveState = (int)Move_State.patrol;
+    }
+
+    public Vector2 GetForwardDirection()
+    {
+        return forwardDirection;
+    }
+
+    public void SetChase(bool toChase)
+    {
+        allowChase = toChase;
     }
 }

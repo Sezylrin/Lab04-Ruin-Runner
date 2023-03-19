@@ -15,6 +15,10 @@ public class EnemyCollision : MonoBehaviour
         if (playerManager.IsInvulnerable) return;
         if (playerManager.isShielded) HandleShieldedCollision();
         col.gameObject.GetComponent<PlayerManager>().TakeDamage();
+        Debug.Log("collision triggered");
+        EnemyAI tempAi = GetComponent<EnemyAI>();
+        tempAi.SetChase(false);
+        tempAi.SetToPatrol();
     }
 
     private void HandleShieldedCollision()
