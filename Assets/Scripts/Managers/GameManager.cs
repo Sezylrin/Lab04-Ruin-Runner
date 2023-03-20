@@ -14,15 +14,14 @@ public class GameManager : MonoBehaviour
     public int score { get; private set; }
     public int level { get; private set; } = 1;
     private int coinsCollected = 0;
+    public int keySpawned = 0;
     private bool canSpawnKey = true;
-    private Vector2[] keySpawnLocations = new Vector2[] { 
-        new Vector2(-5f, -11.5f),
-        new Vector2(-42f, -11.5f),
-        new Vector2(-33f, 10.5f),
-    };
+
+    public List<List<Vector2>> keySpawnLocations = new List<List<Vector2>>(); 
 
     private void Awake()
     {
+        ResetKeys();
         if (Instance != null)
         {
             DestroyImmediate(gameObject);
@@ -37,9 +36,12 @@ public class GameManager : MonoBehaviour
     public void NewGame()
     {
         keysCollected = 0;
+        keySpawned = 0;
         lives = 3;
         score = 0;
         coinsCollected = 0;
+        canSpawnKey = true;
+        ResetKeys();
     }
 
     public void CollectKey()
@@ -74,11 +76,12 @@ public class GameManager : MonoBehaviour
 
     private void SpawnKey(Vector3 playerPosition)
     {
-        if (keysCollected == level)
+        if (keySpawned == level)
         {
             canSpawnKey = false;
         }
         if (!canSpawnKey) return;
+        keySpawned++;
         Vector2 spawnLocation = FindFurthestSpawnLocation(playerPosition);
         Instantiate(key, spawnLocation, Quaternion.identity);
     }
@@ -94,7 +97,7 @@ public class GameManager : MonoBehaviour
         float maxDistance = 0f;
         Vector2 furthestSpawnLocation = Vector2.zero;
 
-        foreach (Vector2 spawnLocation in keySpawnLocations)
+        foreach (Vector2 spawnLocation in keySpawnLocations[level - 1])
         {
             float distance = Vector2.Distance(playerPosition, spawnLocation);
 
@@ -104,12 +107,44 @@ public class GameManager : MonoBehaviour
                 furthestSpawnLocation = spawnLocation;
             }
         }
-
+        keySpawnLocations[level - 1].Remove(furthestSpawnLocation);
         return furthestSpawnLocation;
+    }
+
+    public void SetLevel(int level)
+    {
+        this.level = level;
+    }
+
+    public void IncrementLevel()
+    {
+        level++;
     }
     
     public bool CanExitLevel()
     {
         return level == keysCollected;
+    }
+
+    private void ResetKeys()
+    {
+        keySpawnLocations.Clear();
+        List<Vector2> levelOne = new List<Vector2>();
+        levelOne.Add(new Vector2(-5f, -11.5f));
+        levelOne.Add(new Vector2(-42f, -11.5f));
+        levelOne.Add(new Vector2(-33f, 10.5f));
+        keySpawnLocations.Add(levelOne);
+        List<Vector2> levelTwo = new List<Vector2>();
+        levelTwo.Add(new Vector2(-5f, 10.5f));
+        levelTwo.Add(new Vector2(-5f, -5.5f));
+        levelTwo.Add(new Vector2(-39f, -8.5f));
+        levelTwo.Add(new Vector2(-42f, 10.5f));
+        keySpawnLocations.Add(levelTwo);
+        List<Vector2> levelThree = new List<Vector2>();
+        levelThree.Add(new Vector2(-38f, 10.5f));
+        levelThree.Add(new Vector2(-42f, -6.5f));
+        levelThree.Add(new Vector2(-20f, -8.5f));
+        levelThree.Add(new Vector2(-5f, 10.5f));
+        keySpawnLocations.Add(levelThree);
     }
 }

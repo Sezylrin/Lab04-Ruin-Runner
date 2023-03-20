@@ -25,6 +25,7 @@ public class ExitDoor : MonoBehaviour
         {
             if (GameManager.Instance.CanExitLevel())
             {
+                FindAnyObjectByType<PlayerManager>().ClearAction();
                 Loader.Load(Scene.Victory);
             }
         }

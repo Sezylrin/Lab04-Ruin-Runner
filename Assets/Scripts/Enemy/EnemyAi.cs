@@ -9,7 +9,8 @@ public class EnemyAI : MonoBehaviour
     {
         idle,
         chasing,
-        patrol
+        patrol,
+        stop
     };
     public enum Enemy_Type : int
     {
@@ -76,10 +77,14 @@ public class EnemyAI : MonoBehaviour
             enemyMovement.DeletePath();
         }
         ChooseAction();
-        if (moveState == (int)Move_State.idle && !enemyMovement.isPathing())
-        {
+        if (EnemyType != Enemy_Type.Special)
+            return;
+        if (!allowChase && timer == 0)
+            timer = 3;
+        if (timer > 0)
             timer -= Time.deltaTime;
-        }
+        else
+            allowChase = true;
 
         //Debug.Log(timer);
     }
@@ -106,8 +111,10 @@ public class EnemyAI : MonoBehaviour
         {
             if (GameManager.Instance != null && GameManager.Instance.level == GameManager.Instance.keysCollected)
                 enemyMovement.SetSpeed(enemyMovement.BaseSpeed * chaseSpeedMultiplier);
-            moveState = (int)Move_State.chasing;
-            Debug.Log(moveState + " " + (int)Move_State.chasing);
+            if (allowChase)
+                moveState = (int)Move_State.chasing;
+            else
+                moveState = (int)Move_State.stop;
             return;
         }
         Debug.DrawRay(currentLocation, forwardDirection * detectionDistance,Color.blue, 0.0f);
