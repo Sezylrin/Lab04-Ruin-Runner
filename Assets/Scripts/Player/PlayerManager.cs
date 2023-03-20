@@ -19,7 +19,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject SpeedChild;
     private PlayerMovement _playerMovement;
     private Collider2D _collider2D;
-    private Rigidbody2D _rigidbody2D;
+    public Rigidbody2D _rigidbody2D;
     //Timers
     private float _invulnerableTimer;
 
@@ -28,6 +28,7 @@ public class PlayerManager : MonoBehaviour
         _playerMovement = GetComponent<PlayerMovement>();
         _collider2D = GetComponent<Collider2D>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        Debug.Log(_rigidbody2D == null);
         spawnPoint = transform.position;
     }
 
@@ -89,5 +90,10 @@ public class PlayerManager : MonoBehaviour
     {
         IsInvulnerable = true;
         _invulnerableTimer = timeInSecs;
+    }
+
+    public void ClearAction()
+    {
+        OnDeath = null;
     }
 }

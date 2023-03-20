@@ -90,7 +90,6 @@ public class GameManager : MonoBehaviour
 
     private void SpawnKey(Vector3 playerPosition)
     {
-        Debug.Log("Keys Spawned: " + keySpawned + " Level: " + level);
         if (keySpawned == level)
         {
             canSpawnKey = false;
