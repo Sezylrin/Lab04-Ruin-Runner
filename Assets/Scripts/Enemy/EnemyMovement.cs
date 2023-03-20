@@ -5,9 +5,15 @@ using Pathfinding;
 
 public class EnemyMovement : MonoBehaviour
 {
-
+    public enum Move_Mode: int
+    {
+        Translate,
+        Velocity,
+        force
+    }
     private float speed;
 
+    public Move_Mode MovementMode;
     public float BaseSpeed;
     public float nextWayPointDistance = 0.5f;
     private Vector2 currentTarget;
@@ -78,9 +84,15 @@ public class EnemyMovement : MonoBehaviour
         isMoving = true;
         dir = ((Vector2)path.vectorPath[CurrentWaypoint] - rb.position).normalized;
         Vector2 force = dir * speed * Time.deltaTime;
-        //Debug.Log(direction);
-        rb.velocity = force;
-
+        if (MovementMode == Move_Mode.Translate)
+            this.transform.Translate(force);
+        if (MovementMode == Move_Mode.Velocity)
+            rb.velocity = force;
+        if (MovementMode == Move_Mode.force)
+        {
+            rb.AddForce(force, ForceMode2D.Force);
+            rb.drag = 1;
+        }
         float distance = Vector2.Distance(rb.position, path.vectorPath[CurrentWaypoint]);
 
         if (distance < nextWayPointDistance)
