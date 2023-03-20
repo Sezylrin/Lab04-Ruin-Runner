@@ -14,15 +14,20 @@ public class GameManager : MonoBehaviour
     public int score { get; private set; }
     public int level { get; private set; } = 1;
     private int coinsCollected = 0;
+    private int keySpawned = 0;
     private bool canSpawnKey = true;
-    private Vector2[] keySpawnLocations = new Vector2[] { 
-        new Vector2(-5f, -11.5f),
-        new Vector2(-42f, -11.5f),
-        new Vector2(-33f, 10.5f),
-    };
+
+    public List<List<Vector2>> keySpawnLocations = new List<List<Vector2>>(); 
 
     private void Awake()
     {
+        List<Vector2> levelOne = new List<Vector2>();
+        levelOne.Add(new Vector2(-5f, -11.5f));
+        levelOne.Add(new Vector2(-42f, -11.5f));
+        levelOne.Add(new Vector2(-33f, 10.5f));
+        keySpawnLocations.Add(levelOne);
+        Debug.Log(keySpawnLocations[level - 1][0]);
+    
         if (Instance != null)
         {
             DestroyImmediate(gameObject);
@@ -74,11 +79,12 @@ public class GameManager : MonoBehaviour
 
     private void SpawnKey(Vector3 playerPosition)
     {
-        if (keysCollected == level)
+        if (keySpawned == level)
         {
             canSpawnKey = false;
         }
         if (!canSpawnKey) return;
+        keySpawned++;
         Vector2 spawnLocation = FindFurthestSpawnLocation(playerPosition);
         Instantiate(key, spawnLocation, Quaternion.identity);
     }
@@ -94,7 +100,7 @@ public class GameManager : MonoBehaviour
         float maxDistance = 0f;
         Vector2 furthestSpawnLocation = Vector2.zero;
 
-        foreach (Vector2 spawnLocation in keySpawnLocations)
+        foreach (Vector2 spawnLocation in keySpawnLocations[level - 1])
         {
             float distance = Vector2.Distance(playerPosition, spawnLocation);
 
@@ -104,7 +110,7 @@ public class GameManager : MonoBehaviour
                 furthestSpawnLocation = spawnLocation;
             }
         }
-
+        keySpawnLocations[level - 1].Remove(furthestSpawnLocation);
         return furthestSpawnLocation;
     }
     
