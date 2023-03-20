@@ -99,15 +99,17 @@ public class EnemyAI : MonoBehaviour
     //decides current move state based on logic
     public void StateDecider()
     {
-        if(EnemyType == Enemy_Type.Special)
+        
+        targetLocation = Target.position;
+        currentLocation = this.transform.position;
+        if (EnemyType == Enemy_Type.Special)
         {
             if (GameManager.Instance != null && GameManager.Instance.level == GameManager.Instance.keysCollected)
                 enemyMovement.SetSpeed(enemyMovement.BaseSpeed * chaseSpeedMultiplier);
             moveState = (int)Move_State.chasing;
+            Debug.Log(moveState + " " + (int)Move_State.chasing);
             return;
         }
-        targetLocation = Target.position;
-        currentLocation = this.transform.position;
         Debug.DrawRay(currentLocation, forwardDirection * detectionDistance,Color.blue, 0.0f);
         RaycastHit2D hit = Physics2D.Raycast(currentLocation, forwardDirection,detectionDistance,~enemyMask);
         //Debug.Log(hit.collider.gameObject.name);

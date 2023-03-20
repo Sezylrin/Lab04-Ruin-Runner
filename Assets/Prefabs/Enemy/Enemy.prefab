@@ -51,6 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a4600fb16daa342a54024507ff4527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MovementMode: 1
   BaseSpeed: 100
   nextWayPointDistance: 0.1
   rb: {fileID: 452902554949972341}
@@ -76,7 +77,7 @@ MonoBehaviour:
   moveState: 2
   detectionDistance: 10
   maxDistance: 10
-  chaseSpeedMultiplier: 0
+  chaseSpeedMultiplier: 2
   patrolPoints: []
 --- !u!70 &452902554949972340
 CapsuleCollider2D:
