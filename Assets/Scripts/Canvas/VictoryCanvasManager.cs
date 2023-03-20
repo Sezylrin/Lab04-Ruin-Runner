@@ -44,7 +44,14 @@ public class VictoryCanvasManager : MonoBehaviour
         {
             if (selectedOptionIndex == 0)
             {
-                GameManager.Instance.IncrementLevel();
+                if (GameManager.Instance.level != 3) { 
+                    GameManager.Instance.IncrementLevel();
+                }
+                else
+                {
+                    nextLevelTxt.text = "Level 1";
+                    GameManager.Instance.SetLevel(1);
+                }
                 audioSource.Play();
                 StartCoroutine(ScaleText(nextLevelTxt, 0.2f, 1.11f));
                 Scene sceneToLoad = HelperFunctions.GetNextScene(GameManager.Instance.level);
