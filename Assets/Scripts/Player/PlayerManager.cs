@@ -28,7 +28,6 @@ public class PlayerManager : MonoBehaviour
         _playerMovement = GetComponent<PlayerMovement>();
         _collider2D = GetComponent<Collider2D>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        Debug.Log(_rigidbody2D == null);
         spawnPoint = transform.position;
     }
 
