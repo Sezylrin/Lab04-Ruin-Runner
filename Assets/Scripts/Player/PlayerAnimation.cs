@@ -11,9 +11,12 @@ public class PlayerAnimation : MonoBehaviour
 
     public Transform Speed;
 
+    public bool Override;
+
     private string[] PlayerState = new string[] { "Side-Walk-Left", "Side-Walk-Right", "Up-Walk", "Down-Walk" };
     void Start()
     {
+        Override = false;
         rb = GetComponentInChildren<Rigidbody2D>();
         PlayerAnim = GetComponentInChildren<Animator>();
     }
@@ -21,6 +24,8 @@ public class PlayerAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Override)
+            return;
         Vector2 dir = rb.velocity;
         if (dir.magnitude <= 0.01f)
         {

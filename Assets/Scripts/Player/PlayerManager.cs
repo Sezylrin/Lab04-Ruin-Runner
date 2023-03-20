@@ -68,11 +68,14 @@ public class PlayerManager : MonoBehaviour
         TriggerInvulnerable(999.9f); // Become invulnerable while playing death animation.
         //TODO: Play Death Animation
         //Then Respawn();
-        Invoke(nameof(Respawn), 3.0f); // TODO: change time to fit animation or remove.
+        GetComponentInChildren<Animator>().Play("Dying");
+        GetComponent<PlayerAnimation>().Override = true;
+        Invoke(nameof(Respawn), 2.0f); // TODO: change time to fit animation or remove.
     }
 
     private void Respawn()
     {
+        GetComponent<PlayerAnimation>().Override = false;
         _rigidbody2D.isKinematic = false;
         _collider2D.enabled = true;
         TriggerInvulnerable(3.0f); // Be invulnerable for 3s after respawning to avoid immediate death.
