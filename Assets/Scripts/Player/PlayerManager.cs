@@ -20,6 +20,7 @@ public class PlayerManager : MonoBehaviour
     private PlayerMovement _playerMovement;
     private Collider2D _collider2D;
     public Rigidbody2D _rigidbody2D;
+    public LayerMask enemyMask;
     //Timers
     private float _invulnerableTimer;
 
@@ -40,7 +41,11 @@ public class PlayerManager : MonoBehaviour
 
     private void Update()
     {
-        if (!IsInvulnerable) return;
+        if (!IsInvulnerable)
+        {
+            _collider2D.excludeLayers = 0;
+            return;
+        }
         _invulnerableTimer -= Time.deltaTime;
         IsInvulnerable = _invulnerableTimer > 0;
     }
@@ -88,6 +93,7 @@ public class PlayerManager : MonoBehaviour
     private void TriggerInvulnerable(float timeInSecs)
     {
         IsInvulnerable = true;
+        _collider2D.excludeLayers = enemyMask;
         _invulnerableTimer = timeInSecs;
     }
 
