@@ -9,9 +9,17 @@ public class PlayerAnimation : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    private PlayerManager playerManager;
+
+    private float Timer;
+
+    public float FPS;
+
     public Transform Speed;
 
     public bool Override;
+
+    private int layer = 0;
 
     private string[] PlayerState = new string[] { "Side-Walk-Left", "Side-Walk-Right", "Up-Walk", "Down-Walk" };
     void Start()
@@ -19,11 +27,36 @@ public class PlayerAnimation : MonoBehaviour
         Override = false;
         rb = GetComponentInChildren<Rigidbody2D>();
         PlayerAnim = GetComponentInChildren<Animator>();
+        playerManager = GetComponent<PlayerManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(playerManager.IsInvulnerable);
+        if (playerManager.IsInvulnerable)
+        {
+            Timer -= Time.deltaTime;
+            if (Timer <= 0)
+            {
+                if (layer == 0)
+                {
+                    PlayerAnim.SetLayerWeight(1, 0);
+                }
+                if (layer == 1)
+                {
+                    PlayerAnim.SetLayerWeight(1, 1);
+                }
+
+                Timer = FPS;
+                layer++;
+                layer %= 2;
+            }
+        }
+        else
+        {
+            PlayerAnim.SetLayerWeight(1, 0);
+        }
         if (Override)
             return;
         Vector2 dir = rb.velocity;
@@ -43,5 +76,6 @@ public class PlayerAnimation : MonoBehaviour
             PlayerAnim.Play(dir.y > 0 ? PlayerState[2] : PlayerState[3]);
             Speed.eulerAngles = dir.y > 0 ? new Vector3(90, 90, -90) : new Vector3(-90, 90, -90);
         }
+        
     }
 }

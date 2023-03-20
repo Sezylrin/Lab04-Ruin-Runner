@@ -120,7 +120,7 @@ public class EnemyAI : MonoBehaviour
         Debug.DrawRay(currentLocation, forwardDirection * detectionDistance,Color.blue, 0.0f);
         RaycastHit2D hit = Physics2D.Raycast(currentLocation, forwardDirection,detectionDistance,~enemyMask);
         //Debug.Log(hit.collider.gameObject.name);
-        if (hit && hit.collider.CompareTag("Player") && allowChase)
+        if (hit && hit.collider.CompareTag("Player") && allowChase && !hit.collider.GetComponent<PlayerManager>().IsInvulnerable)
         {
             enemyMovement.SetSpeed(enemyMovement.BaseSpeed * chaseSpeedMultiplier);
             if (deviatedLocation == Vector2.zero)
