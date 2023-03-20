@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class MainMenuCanvasManager : MonoBehaviour
+public class DefeatCanvasManager : MonoBehaviour
 {
     [SerializeField] private RectTransform playerRectTransform;
-    [SerializeField] private TMP_Text playText;
-    
-    private Scene sceneToLoad = Scene.Level1;
+    [SerializeField] private TMP_Text mainMenuTxt;
+    [SerializeField] private TMP_Text retryLvlTxt;
+
     private int selectedOptionIndex = 0;
     private Vector2[] optionPositions = new Vector2[2];
     private bool animating = false;
@@ -39,21 +39,18 @@ public class MainMenuCanvasManager : MonoBehaviour
         {
             if (selectedOptionIndex == 0)
             {
-                GameManager.Instance.SetLevel(1);
                 audioSource.Play();
-                StartCoroutine(ScaleText(playText, 0.2f, 1.11f));
-                StartCoroutine(LoadLevel(audioSource.clip.length - 1.0f));
+                StartCoroutine(ScaleText(retryLvlTxt, 0.2f, 1.11f));
+                Scene sceneToLoad = HelperFunctions.GetNextScene(GameManager.Instance.level);
+                StartCoroutine(LoadLevel(audioSource.clip.length - 1.0f, sceneToLoad));
             }
             else
             {
-                Application.Quit();
+                audioSource.Play();
+                StartCoroutine(ScaleText(mainMenuTxt, 0.2f, 1.11f));
+                StartCoroutine(LoadLevel(audioSource.clip.length - 1.0f, Scene.MainMenu));
             }
         }
-    }
-
-    public void SetSceneToLoad(Scene scene)
-    {
-        sceneToLoad = scene;
     }
 
     private IEnumerator MovePlayerSprite(Vector2 from, Vector2 to)
@@ -73,10 +70,10 @@ public class MainMenuCanvasManager : MonoBehaviour
         animating = false;
     }
 
-    private IEnumerator LoadLevel(float seconds)
+    private IEnumerator LoadLevel(float seconds, Scene scene)
     {
         yield return new WaitForSeconds(seconds);
-        Loader.Load(sceneToLoad);
+        Loader.Load(scene);
     }
 
     private IEnumerator ScaleText(TMP_Text text, float duration, float targetScale)

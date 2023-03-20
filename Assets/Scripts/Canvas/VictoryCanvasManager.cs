@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class MainMenuCanvasManager : MonoBehaviour
+public class VictoryCanvasManager : MonoBehaviour
 {
     [SerializeField] private RectTransform playerRectTransform;
-    [SerializeField] private TMP_Text playText;
-    
-    private Scene sceneToLoad = Scene.Level1;
+    [SerializeField] private TMP_Text mainMenuTxt;
+    [SerializeField] private TMP_Text nextLevelTxt;
+    [SerializeField] private TMP_Text headingTxt;
+
     private int selectedOptionIndex = 0;
     private Vector2[] optionPositions = new Vector2[2];
     private bool animating = false;
@@ -19,6 +20,10 @@ public class MainMenuCanvasManager : MonoBehaviour
         optionPositions[0] = new Vector2(playerRectTransform.anchoredPosition.x, playerRectTransform.anchoredPosition.y);
         optionPositions[1] = new Vector2(playerRectTransform.anchoredPosition.x, -62f);
         audioSource = GetComponent<AudioSource>();
+        if (GameManager.Instance.level == 3)
+        {
+            headingTxt.text = "YOU WIN";
+        }
     }
 
     private void Update()
@@ -39,21 +44,19 @@ public class MainMenuCanvasManager : MonoBehaviour
         {
             if (selectedOptionIndex == 0)
             {
-                GameManager.Instance.SetLevel(1);
+                GameManager.Instance.IncrementLevel();
                 audioSource.Play();
-                StartCoroutine(ScaleText(playText, 0.2f, 1.11f));
-                StartCoroutine(LoadLevel(audioSource.clip.length - 1.0f));
+                StartCoroutine(ScaleText(nextLevelTxt, 0.2f, 1.11f));
+                Scene sceneToLoad = HelperFunctions.GetNextScene(GameManager.Instance.level);
+                StartCoroutine(LoadLevel(audioSource.clip.length - 1.0f, sceneToLoad));
             }
             else
             {
-                Application.Quit();
+                audioSource.Play();
+                StartCoroutine(ScaleText(mainMenuTxt, 0.2f, 1.11f));
+                StartCoroutine(LoadLevel(audioSource.clip.length - 1.0f, Scene.MainMenu));
             }
         }
-    }
-
-    public void SetSceneToLoad(Scene scene)
-    {
-        sceneToLoad = scene;
     }
 
     private IEnumerator MovePlayerSprite(Vector2 from, Vector2 to)
@@ -73,10 +76,10 @@ public class MainMenuCanvasManager : MonoBehaviour
         animating = false;
     }
 
-    private IEnumerator LoadLevel(float seconds)
+    private IEnumerator LoadLevel(float seconds, Scene scene)
     {
         yield return new WaitForSeconds(seconds);
-        Loader.Load(sceneToLoad);
+        Loader.Load(scene);
     }
 
     private IEnumerator ScaleText(TMP_Text text, float duration, float targetScale)
