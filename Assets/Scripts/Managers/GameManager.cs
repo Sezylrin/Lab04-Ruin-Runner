@@ -113,6 +113,16 @@ public class GameManager : MonoBehaviour
         keySpawnLocations[level - 1].Remove(furthestSpawnLocation);
         return furthestSpawnLocation;
     }
+
+    public void SetLevel(int level)
+    {
+        this.level = level;
+    }
+
+    public void IncrementLevel()
+    {
+        level++;
+    }
     
     public bool CanExitLevel()
     {
