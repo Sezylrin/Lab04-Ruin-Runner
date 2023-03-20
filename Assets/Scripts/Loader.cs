@@ -3,6 +3,8 @@ public enum Scene
 {
     MainMenu,
     Level1,
+    Level2,
+    Level3,
     GameOver,
     Victory,
 }
