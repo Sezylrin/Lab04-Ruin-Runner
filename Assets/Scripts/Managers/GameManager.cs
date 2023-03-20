@@ -26,8 +26,18 @@ public class GameManager : MonoBehaviour
         levelOne.Add(new Vector2(-42f, -11.5f));
         levelOne.Add(new Vector2(-33f, 10.5f));
         keySpawnLocations.Add(levelOne);
-        Debug.Log(keySpawnLocations[level - 1][0]);
-    
+        List<Vector2> levelTwo = new List<Vector2>();
+        levelTwo.Add(new Vector2(-5f, 10.5f));
+        levelTwo.Add(new Vector2(-5f, -5.5f));
+        levelTwo.Add(new Vector2(-39f, -8.5f));
+        levelTwo.Add(new Vector2(-42f, 10.5f));
+        keySpawnLocations.Add(levelTwo);
+        List<Vector2> levelThree = new List<Vector2>();
+        levelThree.Add(new Vector2(-38f, 10.5f));
+        levelThree.Add(new Vector2(-42f, -6.5f));
+        levelThree.Add(new Vector2(-20f, -8.5f));
+        levelThree.Add(new Vector2(-5f, 10.5f));
+        keySpawnLocations.Add(levelThree);
         if (Instance != null)
         {
             DestroyImmediate(gameObject);
@@ -42,6 +52,7 @@ public class GameManager : MonoBehaviour
     public void NewGame()
     {
         keysCollected = 0;
+        keySpawned = 0;
         lives = 3;
         score = 0;
         coinsCollected = 0;
@@ -79,6 +90,7 @@ public class GameManager : MonoBehaviour
 
     private void SpawnKey(Vector3 playerPosition)
     {
+        Debug.Log("Keys Spawned: " + keySpawned + " Level: " + level);
         if (keySpawned == level)
         {
             canSpawnKey = false;
