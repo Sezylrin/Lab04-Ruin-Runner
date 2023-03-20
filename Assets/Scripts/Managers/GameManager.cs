@@ -26,7 +26,6 @@ public class GameManager : MonoBehaviour
         levelOne.Add(new Vector2(-42f, -11.5f));
         levelOne.Add(new Vector2(-33f, 10.5f));
         keySpawnLocations.Add(levelOne);
-        Debug.Log(keySpawnLocations[level - 1][0]);
     
         if (Instance != null)
         {
