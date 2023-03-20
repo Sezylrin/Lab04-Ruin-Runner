@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class VictoryCanvasManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class VictoryCanvasManager : MonoBehaviour
     [SerializeField] private TMP_Text mainMenuTxt;
     [SerializeField] private TMP_Text nextLevelTxt;
     [SerializeField] private TMP_Text headingTxt;
+    [SerializeField] private Image bgImage;
+    [SerializeField] private Sprite level3VictoryImg;
 
     private int selectedOptionIndex = 0;
     private Vector2[] optionPositions = new Vector2[2];
@@ -23,6 +26,7 @@ public class VictoryCanvasManager : MonoBehaviour
         if (GameManager.Instance.level == 3)
         {
             headingTxt.text = "YOU WIN";
+            bgImage.sprite = level3VictoryImg;
         }
     }
 
@@ -44,7 +48,14 @@ public class VictoryCanvasManager : MonoBehaviour
         {
             if (selectedOptionIndex == 0)
             {
-                GameManager.Instance.IncrementLevel();
+                if (GameManager.Instance.level != 3) { 
+                    GameManager.Instance.IncrementLevel();
+                }
+                else
+                {
+                    nextLevelTxt.text = "Level 1";
+                    GameManager.Instance.SetLevel(1);
+                }
                 audioSource.Play();
                 StartCoroutine(ScaleText(nextLevelTxt, 0.2f, 1.11f));
                 Scene sceneToLoad = HelperFunctions.GetNextScene(GameManager.Instance.level);

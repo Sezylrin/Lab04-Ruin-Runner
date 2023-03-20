@@ -352,6 +352,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 593071576513173132, guid: 4925ac11fe5f83d47832799bfcb06b01, type: 3}
+      propertyPath: bgImage
+      value: 
+      objectReference: {fileID: 593071576651995922}
+    - target: {fileID: 593071576513173132, guid: 4925ac11fe5f83d47832799bfcb06b01, type: 3}
+      propertyPath: level3VictoryImg
+      value: 
+      objectReference: {fileID: 21300000, guid: 80334492a1e87f340bdaf19e3bc836b8, type: 3}
+    - target: {fileID: 9081156476581443582, guid: 4925ac11fe5f83d47832799bfcb06b01, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e8428c9875486f44bb018ad3adcd21f6, type: 3}
     - target: {fileID: 9081156478375441445, guid: 4925ac11fe5f83d47832799bfcb06b01, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -445,3 +457,14 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4925ac11fe5f83d47832799bfcb06b01, type: 3}
+--- !u!114 &593071576651995922 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9081156476581443582, guid: 4925ac11fe5f83d47832799bfcb06b01, type: 3}
+  m_PrefabInstance: {fileID: 593071576651995921}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
