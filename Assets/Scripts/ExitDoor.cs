@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class ExitDoor : MonoBehaviour
 {
-    private BoxCollider2D exitTrigger;
+    private AudioSource _audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-        exitTrigger = this.gameObject.GetComponent<BoxCollider2D>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -19,15 +19,21 @@ public class ExitDoor : MonoBehaviour
 
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        if (other.gameObject.tag == "Player")
-        {
-            if (GameManager.Instance.CanExitLevel())
-            {
-                FindAnyObjectByType<PlayerManager>().ClearAction();
-                Loader.Load(Scene.Victory);
-            }
-        }
+        if (!col.gameObject.CompareTag("Player")) return;
+        if (!GameManager.Instance.CanExitLevel()) return;
+        StartCoroutine(CompleteLevel());
+    }
+
+    IEnumerator CompleteLevel()
+    {
+        FindAnyObjectByType<PlayerManager>().enabled = false;
+        _audioSource.Play();
+
+        yield return new WaitForSeconds(_audioSource.clip.length);
+
+        FindAnyObjectByType<PlayerManager>().ClearAction();
+        Loader.Load(Scene.Victory);
     }
 }

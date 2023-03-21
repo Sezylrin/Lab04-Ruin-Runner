@@ -18,14 +18,14 @@ public class SpeedPowerUp : MonoBehaviour
         _playerMovement = col.gameObject.GetComponent<PlayerMovement>();
         _playerMovement.moveSpeed += addedSpeed;
         playerManager = col.gameObject.GetComponent<PlayerManager>();
-        playerManager.SpeedChild.SetActive(true);
+        playerManager.speedChild.SetActive(true);
         Invoke(nameof(ResetSpeedBuff), Duration);
         gameObject.SetActive(false);
     }
 
     private void ResetSpeedBuff()
     {
-        playerManager.SpeedChild.SetActive(false);
+        playerManager.speedChild.SetActive(false);
         _playerMovement.moveSpeed -= addedSpeed;
         Destroy(gameObject);
     }

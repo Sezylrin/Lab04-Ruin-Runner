@@ -5015,8 +5015,7 @@ MonoBehaviour:
   isShielded: 0
   spawnPoint: {x: -36.11001, y: 9.100006, z: 0}
   shieldChild: {fileID: 6835503260076248931}
-  SpeedChild: {fileID: 32301844}
-  _rigidbody2D: {fileID: 0}
+  speedChild: {fileID: 32301844}
   enemyMask:
     serializedVersion: 2
     m_Bits: 64

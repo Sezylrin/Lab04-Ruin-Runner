@@ -16,11 +16,14 @@ public class PlayerManager : MonoBehaviour
     public Vector3 spawnPoint;
     [Tooltip("Set this to the shield component in the Player's children if it is not set already.")]
     public GameObject shieldChild;
-    public GameObject SpeedChild;
-    private PlayerMovement _playerMovement;
+    [Tooltip("Set this to the speed component in the Player's children if it is not set already.")]
+    public GameObject speedChild;
     private Collider2D _collider2D;
-    public Rigidbody2D _rigidbody2D;
+    private Rigidbody2D _rigidbody2D;
+
     public LayerMask enemyMask;
+    private PlayerMovement _playerMovement;
+
     //Timers
     private float _invulnerableTimer;
 
