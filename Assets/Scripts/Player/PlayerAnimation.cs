@@ -33,7 +33,6 @@ public class PlayerAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(playerManager.IsInvulnerable);
         if (playerManager.IsInvulnerable)
         {
             Timer -= Time.deltaTime;
