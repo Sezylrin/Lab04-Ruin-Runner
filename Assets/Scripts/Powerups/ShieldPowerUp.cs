@@ -22,8 +22,9 @@ public class ShieldPowerUp : MonoBehaviour
         _spriteRenderer.enabled = false;
         PlayerManager playerManager = col.gameObject.GetComponent<PlayerManager>();
         _audioSource.Play();
-        playerManager.isShielded = true;
-        playerManager.shieldChild.SetActive(true);
+        foreach (Transform childTransform in playerManager.transform)
+            if (childTransform.GetComponent<Shield>()) childTransform.gameObject.SetActive(true); // Set the Shield (child of Player) to active
+        // playerManager.shieldChild.SetActive(true);
         Destroy(gameObject, _audioSource.clip.length);
     }
 }

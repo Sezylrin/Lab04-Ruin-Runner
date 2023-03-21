@@ -7,8 +7,6 @@ public class PlayerManager : MonoBehaviour
 {
     // States
     public bool IsInvulnerable { get; private set; }
-    [HideInInspector]
-    public bool isShielded;
 
     // Delegate Events
     public static event Action OnDeath;
@@ -16,8 +14,6 @@ public class PlayerManager : MonoBehaviour
     #region Components
         [Tooltip("Set this to where you want the player to respawn.")]
         public Vector3 spawnPoint;
-        [Tooltip("Set this to the shield component in the Player's children if it is not set already.")]
-        public GameObject shieldChild;
         [Tooltip("Set this to the speed component in the Player's children if it is not set already.")]
         public GameObject speedChild;
         private Collider2D _collider2D;
@@ -44,7 +40,6 @@ public class PlayerManager : MonoBehaviour
     private void Start()
     {
         OnDeath += HandleDeath; // Subscribe to death event/Called when OnDeath is Invoked.
-        isShielded = false; // Set back to false at runtime just in case.
         IsInvulnerable = false; // Set back to false at runtime just in case.
     }
 
@@ -61,10 +56,10 @@ public class PlayerManager : MonoBehaviour
 
     public void TakeDamage()
     {
-        if (isShielded)
+        Shield shield = GetComponentInChildren<Shield>();
+        if (shield)
         {
-            isShielded = false;
-            if (shieldChild) shieldChild.SetActive(false);
+            StartCoroutine(shield.BreakShield());
             TriggerInvulnerable(5.0f);
         }
         else
