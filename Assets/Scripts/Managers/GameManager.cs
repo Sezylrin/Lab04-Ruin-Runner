@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public int lives { get; private set; }
     public int score { get; private set; }
     public int level { get; private set; } = 1;
-    private int coinsCollected = 0;
+    public int coinsCollected = 0;
     public int keySpawned = 0;
     private bool canSpawnKey = true;
 
@@ -68,10 +68,15 @@ public class GameManager : MonoBehaviour
         coinsCollected++;
         AddToScore(50);
         LevelManager.Instance.SetScore(score.ToString());
-        if (coinsCollected % coinAmountToSpawnKey == 0 && canSpawnKey)
+        if (CheckKeyCanSpawn())
         {
             SpawnKey(playerPosition);
         }
+    }
+
+    public bool CheckKeyCanSpawn()
+    {
+        return coinsCollected % coinAmountToSpawnKey == 0 && canSpawnKey;
     }
 
     private void SpawnKey(Vector3 playerPosition)
