@@ -9,18 +9,23 @@ public class PlayerManager : MonoBehaviour
     public bool IsInvulnerable { get; private set; }
     [HideInInspector]
     public bool isShielded;
+
     // Delegate Events
     public static event Action OnDeath;
-    // Components
-    [Tooltip("Set this to where you want the player to respawn.")]
-    public Vector3 spawnPoint;
-    [Tooltip("Set this to the shield component in the Player's children if it is not set already.")]
-    public GameObject shieldChild;
-    [Tooltip("Set this to the speed component in the Player's children if it is not set already.")]
-    public GameObject speedChild;
-    private Collider2D _collider2D;
-    private Rigidbody2D _rigidbody2D;
 
+    #region Components
+        [Tooltip("Set this to where you want the player to respawn.")]
+        public Vector3 spawnPoint;
+        [Tooltip("Set this to the shield component in the Player's children if it is not set already.")]
+        public GameObject shieldChild;
+        [Tooltip("Set this to the speed component in the Player's children if it is not set already.")]
+        public GameObject speedChild;
+        private Collider2D _collider2D;
+        private Rigidbody2D _rigidbody2D;
+        private AudioSource _audioSource;
+    #endregion
+
+    // Globals
     public LayerMask enemyMask;
     private PlayerMovement _playerMovement;
 
@@ -32,6 +37,7 @@ public class PlayerManager : MonoBehaviour
         _playerMovement = GetComponent<PlayerMovement>();
         _collider2D = GetComponent<Collider2D>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _audioSource = GetComponent<AudioSource>();
         spawnPoint = transform.position;
     }
 
@@ -73,13 +79,12 @@ public class PlayerManager : MonoBehaviour
         _rigidbody2D.velocity = Vector2.zero; // Edge case of moving while dying.
         _rigidbody2D.isKinematic = true;
         _collider2D.enabled = false;
-        if (GameManager.Instance) GameManager.Instance.DecrementLives(); // TODO: change this out for full death handling on GameManager.
+        _audioSource.Play();
+        if (GameManager.Instance) GameManager.Instance.DecrementLives();
         TriggerInvulnerable(999.9f); // Become invulnerable while playing death animation.
-        //TODO: Play Death Animation
-        //Then Respawn();
         GetComponentInChildren<Animator>().Play("Dying");
         GetComponent<PlayerAnimation>().Override = true;
-        Invoke(nameof(Respawn), 2.0f); // TODO: change time to fit animation or remove.
+        Invoke(nameof(Respawn), 2.0f);
     }
 
     private void Respawn()
@@ -88,7 +93,7 @@ public class PlayerManager : MonoBehaviour
         _rigidbody2D.isKinematic = false;
         _collider2D.enabled = true;
         TriggerInvulnerable(3.0f); // Be invulnerable for 3s after respawning to avoid immediate death.
-        transform.position = spawnPoint; // Respawn at spawn point. TODO: change to facilitate multiple spawns/different levels.
+        transform.position = spawnPoint;
         _playerMovement.canMove = true; // Enable movement input.
     }
 
