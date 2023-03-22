@@ -19,6 +19,8 @@ public class EnemyAI : MonoBehaviour
     }
     public Transform Target;
 
+    public bool debugging = false;
+
     private Vector2 targetLocation;
     private Vector2 currentLocation;
     private Vector2 deviatedLocation;
@@ -36,6 +38,7 @@ public class EnemyAI : MonoBehaviour
     private int moveState;
     private int prevMoveState;
     private bool allowChase;
+    private Rigidbody2D rb;
 
     public float detectionDistance;
     public float maxDistance;
@@ -48,6 +51,7 @@ public class EnemyAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         allowChase = true;
         GameObject Grid = GameObject.Find("Astargrid");
         if (!Grid)
@@ -67,7 +71,7 @@ public class EnemyAI : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         CalculateForward();
         StateDecider();
@@ -79,7 +83,7 @@ public class EnemyAI : MonoBehaviour
         ChooseAction();
         if (EnemyType != Enemy_Type.Special)
             return;
-        if (!allowChase && timer == 0)
+        if (!allowChase && timer <= 0)
             timer = 3;
         if (timer > 0)
             timer -= Time.deltaTime;
@@ -94,11 +98,17 @@ public class EnemyAI : MonoBehaviour
         Vector2 dir = enemyMovement.Direction();
         if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y))
         {
-            forwardDirection = dir.x > 0 ? Vector2.right : Vector2.left;
+            if (dir.x > 0.1f)
+                forwardDirection = Vector2.right;
+            else if (dir.x < -0.1f)
+                forwardDirection = Vector2.left;
         }
         else if (Mathf.Abs(dir.x) < Mathf.Abs(dir.y))
         {
-            forwardDirection = dir.y > 0 ? Vector2.up : Vector2.down;
+            if (dir.y > 0.1f)
+                forwardDirection = Vector2.up;
+            else if (dir.y < -0.1f)
+                forwardDirection = Vector2.down;
         }
     }
     //decides current move state based on logic
@@ -106,7 +116,7 @@ public class EnemyAI : MonoBehaviour
     {
         
         targetLocation = Target.position;
-        currentLocation = this.transform.position;
+        currentLocation = transform.position;
         if (EnemyType == Enemy_Type.Special)
         {
             if (GameManager.Instance != null && GameManager.Instance.level == GameManager.Instance.keysCollected)
@@ -117,9 +127,11 @@ public class EnemyAI : MonoBehaviour
                 moveState = (int)Move_State.stop;
             return;
         }
-        Debug.DrawRay(currentLocation, forwardDirection * detectionDistance,Color.blue, 0.0f);
+        //Debug.DrawRay(currentLocation, forwardDirection * detectionDistance,Color.blue, 0.0f);
         RaycastHit2D hit = Physics2D.Raycast(currentLocation, forwardDirection,detectionDistance,~enemyMask);
         //Debug.Log(hit.collider.gameObject.name);
+        if (debugging && hit && hit.collider.CompareTag("Player"))
+            Debug.Log(allowChase + " " + !hit.collider.GetComponent<PlayerManager>().IsInvulnerable);
         if (hit && hit.collider.CompareTag("Player") && allowChase && !hit.collider.GetComponent<PlayerManager>().IsInvulnerable)
         {
             enemyMovement.SetSpeed(enemyMovement.BaseSpeed * chaseSpeedMultiplier);

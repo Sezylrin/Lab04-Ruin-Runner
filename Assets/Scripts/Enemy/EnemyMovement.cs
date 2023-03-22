@@ -13,6 +13,8 @@ public class EnemyMovement : MonoBehaviour
     }
     private float speed;
 
+    public bool debug = false;
+
     public Move_Mode MovementMode;
     public float BaseSpeed;
     public float nextWayPointDistance = 0.5f;
@@ -75,6 +77,14 @@ public class EnemyMovement : MonoBehaviour
     {
         if (path == null)
             return;
+        
+        
+        float distance = Vector2.Distance(rb.position, path.vectorPath[CurrentWaypoint]);
+
+        if (distance < nextWayPointDistance)
+        {
+            CurrentWaypoint++;
+        }
         if (CurrentWaypoint >= path.vectorPath.Count)
         {
             //Debug.Log(CurrentWaypoint + " " + path.vectorPath.Count);
@@ -84,6 +94,11 @@ public class EnemyMovement : MonoBehaviour
         isMoving = true;
         dir = ((Vector2)path.vectorPath[CurrentWaypoint] - rb.position).normalized;
         Vector2 force = dir * speed * Time.deltaTime;
+        if (debug)
+        {
+            Debug.Log(this.gameObject.name + " " + force);
+            Debug.Log(this.gameObject.name + " " + path.vectorPath[CurrentWaypoint] + " " + rb.position);
+        }
         if (MovementMode == Move_Mode.Translate)
             this.transform.Translate(force);
         if (MovementMode == Move_Mode.Velocity)
@@ -93,12 +108,7 @@ public class EnemyMovement : MonoBehaviour
             rb.AddForce(force, ForceMode2D.Force);
             rb.drag = 1;
         }
-        float distance = Vector2.Distance(rb.position, path.vectorPath[CurrentWaypoint]);
-
-        if (distance < nextWayPointDistance)
-        {
-            CurrentWaypoint++;
-        }
+        
     }
 
     public void SetTarget(Vector2 target)

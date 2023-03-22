@@ -53,7 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementMode: 1
   BaseSpeed: 100
-  nextWayPointDistance: 0.1
+  nextWayPointDistance: 0.5
   rb: {fileID: 452902554949972341}
 --- !u!114 &452902554949972339
 MonoBehaviour:
@@ -181,7 +181,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3135f259e7259b748bef63acf521e81a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dieOnShieldedCollision: 0
 --- !u!114 &2162912907716747999
 MonoBehaviour:
   m_ObjectHideFlags: 0
