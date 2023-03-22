@@ -52,13 +52,12 @@ public class GameManager : MonoBehaviour
 
     public void DecrementLives()
     {
-        if (lives == 0)
+        if (--lives == 0)
         {
             Loader.Load(Scene.Defeat);
         }
         else
         {
-            lives--;
             LevelManager.Instance.SetLives(lives.ToString());
         }
     }
