@@ -34,7 +34,7 @@ public class EnemyAnimation : MonoBehaviour
             Debug.Break();
             Debug.Log("Missing Enemy Movement");
         }
-        enemyAnim.speed = enemyMovement.GetSpeed() * 0.01f;
+        enemyAnim.speed = enemyMovement.GetSpeed() * 0.02f;
         if (enemyAi.GetForwardDirection() == Vector2.up)
             enemyAnim.Play(enemyState[0]);
         if (enemyAi.GetForwardDirection() == Vector2.right)
