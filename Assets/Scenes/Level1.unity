@@ -16742,6 +16742,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin
       objectReference: {fileID: 0}
+    - target: {fileID: 4332517403461990403, guid: 37ffbb35b6b89a64e83979e80f759374, type: 3}
+      propertyPath: m_Volume
+      value: 0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18379,6 +18383,14 @@ PrefabInstance:
     - target: {fileID: 6804275471101248304, guid: 3c5cfa96a1581804cb6de87a971dff0a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804275471101248305, guid: 3c5cfa96a1581804cb6de87a971dff0a, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804275471101248305, guid: 3c5cfa96a1581804cb6de87a971dff0a, type: 3}
+      propertyPath: m_Volume
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6804275471101248306, guid: 3c5cfa96a1581804cb6de87a971dff0a, type: 3}
       propertyPath: m_Name

@@ -12,6 +12,8 @@ public class VictoryCanvasManager : MonoBehaviour
     [SerializeField] private TMP_Text headingTxt;
     [SerializeField] private Image bgImage;
     [SerializeField] private Sprite level3VictoryImg;
+    [SerializeField] private AudioSource bgMusicAudioSource;
+    [SerializeField] private AudioClip finalVictoryAudioClip;
 
     private int selectedOptionIndex = 0;
     private Vector2[] optionPositions = new Vector2[2];
@@ -26,7 +28,10 @@ public class VictoryCanvasManager : MonoBehaviour
         if (GameManager.Instance.level == 3)
         {
             headingTxt.text = "YOU WIN";
+            nextLevelTxt.text = "Level 1";
             bgImage.sprite = level3VictoryImg;
+            bgMusicAudioSource.clip = finalVictoryAudioClip;
+            bgMusicAudioSource.Play();
         }
     }
 

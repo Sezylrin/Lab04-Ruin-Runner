@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
     {
         if (lives == 0)
         {
-            Loader.Load(Scene.GameOver);
+            Loader.Load(Scene.Defeat);
         }
         else
         {

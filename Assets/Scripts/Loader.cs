@@ -5,7 +5,7 @@ public enum Scene
     Level1,
     Level2,
     Level3,
-    GameOver,
+    Defeat,
     Victory,
 }
 
