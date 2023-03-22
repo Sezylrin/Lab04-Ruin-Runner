@@ -60,7 +60,7 @@ public class PlayerManager : MonoBehaviour
         if (shield)
         {
             StartCoroutine(shield.BreakShield());
-            TriggerInvulnerable(5.0f);
+            TriggerInvulnerable(3f);
         }
         else
         {
