@@ -47,7 +47,7 @@ public class EnemyAI : MonoBehaviour
     public Vector2[] patrolPoints;
 
     private Vector2 idlePoint;
-    private float timer;
+    public float timer;
     // Start is called before the first frame update
     void Start()
     {
@@ -87,9 +87,8 @@ public class EnemyAI : MonoBehaviour
             timer = 3;
         if (timer > 0)
             timer -= Time.deltaTime;
-        else
+        if (timer <= 0)
             allowChase = true;
-
         //Debug.Log(timer);
     }
     //Calculate enemies facing direction
@@ -119,6 +118,7 @@ public class EnemyAI : MonoBehaviour
         currentLocation = transform.position;
         if (EnemyType == Enemy_Type.Special)
         {
+            Debug.Log(allowChase);
             if (GameManager.Instance != null && GameManager.Instance.level == GameManager.Instance.keysCollected)
                 enemyMovement.SetSpeed(enemyMovement.BaseSpeed * chaseSpeedMultiplier);
             if (allowChase)

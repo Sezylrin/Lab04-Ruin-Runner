@@ -197,12 +197,20 @@ PrefabInstance:
       value: Enemy Special Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2185278886391576460, guid: 3de0b7af2ea5b2d4686de854d056435d, type: 3}
+      propertyPath: debug
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2185278886391576460, guid: 3de0b7af2ea5b2d4686de854d056435d, type: 3}
       propertyPath: BaseSpeed
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2185278886391576460, guid: 3de0b7af2ea5b2d4686de854d056435d, type: 3}
       propertyPath: nextWayPointDistance
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2185278886391576461, guid: 3de0b7af2ea5b2d4686de854d056435d, type: 3}
+      propertyPath: debugging
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2185278886391576462, guid: 3de0b7af2ea5b2d4686de854d056435d, type: 3}
       propertyPath: m_RootOrder
